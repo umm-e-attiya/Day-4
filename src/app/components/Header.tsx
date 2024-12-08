@@ -72,10 +72,9 @@ const Navbar = () =>{
                     </div>
 
                     <div className="flex lg:ml-7 ml-24 gap-4 mt-4">
-                    <div>
-                        <Link href="/productlisting"></Link>
+                    
                     <BsCart2 />
-                    </div>
+                    
                     <RiAccountCircleFill />
                     </div>
 
