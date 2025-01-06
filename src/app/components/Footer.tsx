@@ -34,10 +34,10 @@ const Footer = () => {
                                      </div>
 
 
-                <div className="bg-gray-200 w-full   lg:h-[499px]">
-                    <div className="lg:flex lg:flex-row ">
+                <div className="bg-gray-200 w-full bg-fixed   lg:h-[499px]">
+                    <div className="lg:grid lg:grid-cols-5 ">
                         <div>
-                            <h1 className="font-bold text-[33px] lg:ml-16">SHOP.CO</h1>
+                            <h1 className="font-bold text-[33px] lg:mt-36 lg:ml-16">SHOP.CO</h1>
                             <p className="w-[248px] h-[66px] font-normal text-gray-500 lg:ml-16 text-[14px]">We have clothes that suits your style and which youre proud to wear. From women to men.</p>
                             <div className="flex lg:ml-16 mt-10 gap-5">
                                 <Image src={image1} alt="image1" className="w-[28px] h-[28px]" />

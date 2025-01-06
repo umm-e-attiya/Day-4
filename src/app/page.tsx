@@ -54,7 +54,7 @@ export default function Home() {
   
   
                
-              <div className="w-[403px] h-[58px] mt-4 lg:mt-[200px] lg:ml-[600px]">
+              <div className="w-[403px] h-[58px] mt-4 lg:mt-[200px] lg:ml-[300px]">
                 <p className="font-bold text-[30px] mx-10 md:mx-80 md:whitespace-nowrap lg:text-[48px]">NEW ARRIVALS</p>
               </div>
                 <div>
@@ -124,7 +124,7 @@ export default function Home() {
   
                               </div>
   
-                              <div className=" lg:w-[400px] lg:h-[240px] w-[300px] h-[300px] mt-8 border-[1px] rounded-[40px] pl-[20px]  lg:ml-[20px]">
+                              <div className=" lg:w-[400px] lg:h-[240px] w-[300px] h-[300px]  border-[1px] rounded-[40px] pl-[20px]  lg:ml-[20px]">
                                <Image src={fivefullstar} alt="fivefullstar" className="w-[138px] h-[22px] mt-6" />
                                <div className="flex">
                                 <p className="font-bold text-[20px] mt-5">Alex K.</p>
@@ -133,7 +133,7 @@ export default function Home() {
                               <p className="lg:w-[336px] h-[88px] font-normal text-gray-400 text-[16px]">Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.</p>
   
                               </div>
-                              <div className=" md:visible lg:w-[400px] lg:h-[240px] w-[300px] h-[300px] mt-8  border-[1px] rounded-[40px] pl-[20px]  lg:ml-[20px]">
+                              <div className="  lg:w-[400px] lg:h-[240px] w-[300px] h-[300px]  border-[1px] rounded-[40px] pl-[20px]  lg:ml-[20px]">
                                <Image src={fivefullstar} alt="fivefullstar" className="w-[138px] h-[22px] mt-6" />
                                <div className="flex">
                                 <p className="font-bold text-[20px] mt-5">James L.</p>

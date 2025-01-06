@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <div className="flex items-center justify-between bg-white mt-4 lg:mt-6 px-4 md:px-7 lg:px-14">
+      <div className="flex items-center justify-between bg-white mt-4 lg:mt-6 px-7 md:px-7 lg:px-14">
         {/* Mobile Menu Icon */}
         <Sheet>
           <SheetTrigger className="lg:hidden">

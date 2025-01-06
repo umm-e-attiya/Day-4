@@ -153,9 +153,9 @@ const Section1 = ({params}: param) =>{
             </div>
             <div >
               <ul className="grid md:grid-cols-2 lg:grid-cols-2 mt-10">
-                 {Review.map((review)=>{
+                 {Review.map((review, index)=>{
                     return(
-                       <ul className="lg:w-[610px] lg:h-[300px] h-[350px] rounded-[20px] border-[1px] py-[28px] px-[32px] mt-10">
+                       <ul key={index} className="lg:w-[610px] lg:h-[300px] h-[350px] rounded-[20px] border-[1px] py-[28px] px-[32px] mt-10">
                           <Image src={review.star} alt="not founded" width={127} height={22} />
                            <div className="flex gap-3 mt-[22px]">
                             <p className="font-bold text-[20px]">{review.Name}</p>
@@ -177,10 +177,10 @@ const Section1 = ({params}: param) =>{
             </div>
               <div>
                                          <ul className="lg:flex md:grid md:grid-cols-2 mt-[30px] mx-10 lg:mx-[100px] lg:gap-20">
-                                            {Section3.map((section3)=>{
+                                            {Section3.map((section3, index)=>{
                                               return(
                                                    
-                                                   <ul className="py-5">
+                                                   <ul key={index} className="py-5">
                                                       <Image src={section3.image} alt="not found" width={300} height={300} className="rounded-[20px]" />
                                                        <h1 className="font-bold text-[20px] gap-2 whitespace-nowrap">{section3.title}</h1>
                                                        <div className="flex gap-4">
