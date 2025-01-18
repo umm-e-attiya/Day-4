@@ -74,6 +74,8 @@ export default function Home() {
                  <div>
                   <Section2/>
                  </div>
+
+                 
              
                
   
@@ -82,7 +84,9 @@ export default function Home() {
                           </div>
                           
                           <hr className="mt-4 lg:ml-[300px] w-[200px] lg:w-[1000px]"/>
-                          
+
+
+                      
   
                        <div className="lg:w-[1239px] w-[300px]  lg:h-[820px] rounded-[40px] bg-gray-100 mt-[100px] lg:ml-[200px] ">
                              <div>
@@ -142,7 +146,9 @@ export default function Home() {
                               <p className="lg:w-[336px] h-[88px] font-normal text-gray-400 text-[16px]">As someone whos always on the lookout for unique fashion pieces Im thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.</p>
                             </div>
                             </div>
-  
+                           
+
+                           
                             
                                        
                                              

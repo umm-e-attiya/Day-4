@@ -36,7 +36,7 @@ const Navbar = () => {
               </li>
               <li>On Sale</li>
               <li>New Arrival</li>
-              <li>Brands</li>
+             <Link href="/brand"> <li>Brands</li></Link>
             </ul>
           </SheetContent>
         </Sheet>
@@ -53,7 +53,7 @@ const Navbar = () => {
           </li>
           <li>On Sale</li>
           <li>New Arrival</li>
-          <li>Brands</li>
+         <Link href="/brand"><li>Brands</li></Link> 
         </ul>
 
         {/* Search Bar */}
