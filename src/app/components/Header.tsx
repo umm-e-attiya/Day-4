@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import vector from "/public/Vector.png"; // Path corrected
-import searchbar from "/public/searchbar.png"; // Path corrected
+// import searchbar from "/public/searchbar.png"; // Path corrected
+import Searchbar from "./Search"
 import { IoChevronDownSharp } from "react-icons/io5";
 import { BsCart2 } from "react-icons/bs";
 import { RiAccountCircleFill } from "react-icons/ri";
@@ -29,7 +30,8 @@ const Navbar = () => {
             <MenuIcon className="w-6 h-6" />
           </SheetTrigger>
           <SheetContent className="bg-white">
-            <Image src={searchbar} alt="searchbar" width={250} height={47} />
+            {/* <Image src={searchbar} alt="searchbar" width={250} height={47} /> */}
+            <Searchbar/>
             <ul className="text-gray-400 mt-14 space-y-2">
               <li className="flex items-center justify-between">
                 Shop <IoChevronDownSharp />
@@ -58,11 +60,12 @@ const Navbar = () => {
 
         {/* Search Bar */}
         <div className="hidden lg:flex lg:ml-auto">
-          <Image src={searchbar} alt="searchbar" width={577} height={48} />
+         <Searchbar/>
         </div>
 
         {/* Icons */}
         <div className="flex items-center gap-4 ml-10 lg:ml-6">
+        
           <Link href="/cart">
             <BsCart2 className="w-6 h-6 cursor-pointer" />
           </Link>
