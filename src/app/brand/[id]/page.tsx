@@ -6,13 +6,14 @@ interface Product {
   _id: string;
   name: string;
   description: string;
-  price: string;
+  price: number;
   imageUrl: string;
   category: string;
-  discountPercent: string;
-  isNew: string;
+  discountPercent: number;
+  isNew: boolean;
   colors: string;
   sizes: string;
+  
 }
 
 export default async function ProductPage({ params }: { params: { id: string } }) {

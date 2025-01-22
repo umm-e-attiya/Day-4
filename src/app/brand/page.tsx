@@ -4,16 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 type data = {
-   id:number;
+   id:string;
    name:string,
    description:string,
-   price:string,
+   price:number,
    imageUrl:string,
    category:string,
-   discountPercent:string,
-   isNew:string,
+   discountPercent:number,
+   isNew:boolean,
    colors:string,
-   sizes:string
+   sizes:string,
+   
 
 }
 const data = async () =>{
@@ -31,6 +32,14 @@ const data = async () =>{
        sizes
      }
      `);
+
+     if (!data || data.length === 0) {
+      return (
+        <div className="text-center mt-10">
+          <h2 className="text-xl font-bold">No products available</h2>
+        </div>
+      );
+    }
        console.log(data);
        
     return(

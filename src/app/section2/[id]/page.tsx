@@ -12,7 +12,7 @@ interface param {
     }
 }
 
-const Section1 = ({params}: param) =>{
+const Section2 = ({params}: param) =>{
     const [quantity, setQuantity] = useState(1);
     const [selectedSize, setSelectedSize] = useState("Large");
     const convertNumber = Number(params.id)
@@ -30,8 +30,7 @@ const Section1 = ({params}: param) =>{
             id: section2find?.id,
             title: section2find?.title,
             price: section2find?.price,
-            quantity,
-            size: selectedSize,
+            quantity:section2find?.quantity,
         };
 
         setCartItems([...cartItems, cartItem]); // Add to local cart state
@@ -210,4 +209,4 @@ const Section1 = ({params}: param) =>{
           </div>
     )
 }
-export default Section1;
+export default Section2;

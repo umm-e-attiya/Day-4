@@ -41,8 +41,7 @@ const Section1 = ({params}: param) =>{
             id: section1find?.id,
             title: section1find?.title,
             price: section1find?.price,
-            quantity,
-            size: selectedSize,
+            quantity:section1find?.quantity,
         };
 
         setCartItems([...cartItems, cartItem]); // Add to local cart state

@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { client } from "@/sanity/lib/client";
 
 interface CartItem {
-  id: number;
+  id: string;
   title: string;
   price: number;
   image: string;
@@ -16,19 +17,25 @@ const CartPage = () => {
 
   useEffect(() => {
     const savedCartData = localStorage.getItem("cartData");
-    
 
     if (savedCartData) {
-      setCartItems(JSON.parse(savedCartData)); // Local storage ka data state mein set karna
+      const parsedData = JSON.parse(savedCartData).map((item: any) => ({
+        ...item,
+        quantity: item.quantity ? Number(item.quantity) : 1,
+      }));
+      setCartItems(parsedData);
     }
   }, []);
 
-  const handleRemoveItem = (id: number) => {
+
+  
+
+  const handleRemoveItem = (id: string) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
   };
 
-  const handleQuantityChange = (id: number, action: "increment" | "decrement") => {
+  const handleQuantityChange = (id: string, action: "increment" | "decrement") => {
     const updatedCart = cartItems.map((item) => {
       if (item.id === id) {
         const newQuantity =
@@ -53,7 +60,7 @@ const CartPage = () => {
               className="flex flex-wrap gap-3 px-4 sm:px-6 md:px-16 lg:px-24 items-center mb-5 border rounded-[20px] w-full"
             >
               <Image
-                src={item.image || "/noting"}
+                src={item.image || "/not-found.png"}
                 alt={item.title}
                 width={80}
                 height={80}
@@ -64,7 +71,7 @@ const CartPage = () => {
                   {item.title}
                 </h2>
                 <p className="text-[16px] sm:text-[18px] lg:text-[20px] text-gray-500">
-                  {item.price}
+                  {item.price} Rs.
                 </p>
               </div>
               <div className="flex items-center gap-2 sm:gap-4">
@@ -95,11 +102,11 @@ const CartPage = () => {
           <hr />
           <div className="text-right mt-5">
             <p className="text-[20px] sm:text-[24px] lg:text-[28px] font-bold">
-              Total: $
-              {cartItems.reduce(
-                (total, item) => total + item.price * item.quantity,
-                0
-              )}
+              Total: {cartItems.reduce((total, item) => {
+                const validQuantity = isNaN(item.quantity) ? 1 : item.quantity;
+                return total + item.price * validQuantity;
+              }, 0)}{" "}
+              Rs.
             </p>
           </div>
         </div>
@@ -110,6 +117,6 @@ const CartPage = () => {
       )}
     </div>
   );
-}
+};
 
 export default CartPage;

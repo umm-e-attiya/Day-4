@@ -1,13 +1,16 @@
+
+
 type Data = {
     id: number,
     image: string,
     title: string,
     starimage: string,
-    review: string
-    price: string,
-    discountedprice: string,
-    sale: string,
+    review: number,
+    price: number,
+    discountedprice: number,
+    sale: number,
     description: string,
+    quantity:number,
 }
 
 type Data2 = {
@@ -16,6 +19,7 @@ type Data2 = {
     tickimage: string,
     description: string,
     date: string,
+    
 }
 
 
@@ -23,11 +27,13 @@ type Data3 = {
     image: string,
     title: string,
     starimage: string,
-    review: string,
-    price: string,
-    discountedprice: string,
-    sale: string,
+    review: number,
+    price: number,
+    discountedprice: number,
+    sale: number,
+    quantity:number
 }
+
 
 
 export const section1 = [
@@ -36,10 +42,10 @@ export const section1 = [
         image: "/image 7.png",
         title: "T-shirt with Tape Details",
         starimage: "/fivehalfstar.png",
-        review: "4.5/5",
-        price: "$120",
+        review: 4.5/5,
+        price: 120,
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and styles.",
-
+        quantity:1,
     },
 
 
@@ -48,12 +54,12 @@ export const section1 = [
         image: "/image 8.png",
         title: "Skinny Fit Jeans",
         starimage: "/fourhalfstar.png",
-        review: "3.5/5",
-        price: "$240",
-        discountedprice: "$260",
-        sale: "-20%",
+        review: 3.5/5,
+        price: 240,
+        discountedprice: 260,
+        sale: 20,
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and styles.",
-
+        quantity:1,
     },
 
 
@@ -62,10 +68,10 @@ export const section1 = [
         image: "/image 9.png",
         title: "Checkered Shirt",
         starimage: "/fivehalfstar.png",
-        review: "4.5/5",
-        price: "$180",
+        review: 4.5/5,
+        price: 180,
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and styles.",
-
+        quantity:1,
     },
 
     {
@@ -73,12 +79,12 @@ export const section1 = [
         image: "/image 10.png",
         title: "Sleeve Striped T-shirt",
         starimage: "/fivehalfstar.png",
-        review: "4.5/5",
-        price: "$130",
-        discountedprice: "$160",
-        sale: "-30%",
+        review: 4.5/5,
+        price: 130,
+        discountedprice: 160,
+        sale: 30,
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and styles.",
-
+        quantity:1,
     },
 ];
 
@@ -90,12 +96,12 @@ export const section2 = [
         image: "/image11.png",
         title: "Vertical Striped Shirt",
         starimage: "/fivefullstar.png",
-        review: "5.0/5",
-        price: "$212",
-        discountedprice: "$232",
-        sale: "-20%",
+        review: 5.0/5,
+        price: 212,
+        discountedprice: 232,
+        sale: 20,
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and styles.",
-
+        quantity:1,
     },
 
 
@@ -104,10 +110,10 @@ export const section2 = [
         image: "/image12.png",
         title: "Courage Graphic T-shirt",
         starimage: "/fourfullstar.png",
-        review: "4.0/5",
-        price: "$145",
+        review: 4.0/5,
+        price: 145,
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and styles.",
-
+        quantity:1,
     },
 
     {
@@ -115,10 +121,10 @@ export const section2 = [
         image: "/image13.png",
         title: "Loose Fit Bermuda Shorts",
         starimage: "/threefullstar.png",
-        review: "3.0/5",
-        price: "$80",
+        review: 3.0/5,
+        price: 80,
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and styles.",
-
+        quantity:1,
     },
 
     {
@@ -126,10 +132,10 @@ export const section2 = [
         image: "/image14.png",
         title: "Faded Skinny Jeans",
         starimage: "/fivehalfstar.png",
-        review: "4.5/5",
-        price: "$210",
+        review: 4.5/5,
+        price: 210,
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and styles.",
-
+        quantity:1,
     },
 
 ]
@@ -198,9 +204,9 @@ export const Section3 = [
         title: "Polo with Contrast Trims",
         starimage: "/fourfullstar.png",
         review: "4.0/5",
-        price: "$212",
-        discountedprice: "$242",
-        sale: "-20%",
+        price: 212,
+        discountedprice: 242,
+        sale: 20,
     },
 
 
@@ -208,8 +214,8 @@ export const Section3 = [
         image: "/image16.png",
         title: "Gradient Graphic T-shirt",
         starimage: "/fourhalfstar.png",
-        review: "3.5/5",
-        price: "$145",
+        review: 3.5/5,
+        price: 145,
     },
 
 
@@ -217,8 +223,8 @@ export const Section3 = [
         image: "/image17.png",
         title: "Polo with Tipping Details",
         starimage: "/fivehalfstar.png",
-        review: "4.5/5",
-        price: "$180",
+        review: 4.5/5,
+        price: 180,
     },
 
 
@@ -226,9 +232,10 @@ export const Section3 = [
         image: "/image18.png",
         title: "Black Striped T-shirt",
         starimage: "/fivefullstar.png",
-        review: "5.0/5",
-        price: "$120",
-        discountedprice: "$150",
-        sale: "-30%",
+        review: 5.0/5,
+        price: 120,
+        discountedprice: 150,
+        sale: 30,
     },
 ]
+   

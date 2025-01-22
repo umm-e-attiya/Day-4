@@ -57,6 +57,7 @@ export default defineType({
                 {type: 'string'}
             ]
         },
+        
         {
             name:"sizes",
             title:"Sizes",

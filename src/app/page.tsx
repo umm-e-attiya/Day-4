@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import rectangle2 from "../../public/Rectangle2.png"
 import versace from "../../public/versace.png"
@@ -23,92 +22,124 @@ import Section2 from "./section2/page";
 
 
 
+
+
+
 export default function Home() {
- 
   return (
-    <div>
-    <div className="w-full lg:h-[600px] bg-gray-100 mt-3 lg:flex">                      
-    <div>                     
-      <h1 className="w-[315px] h-[40px] pt-[80px]  lg:ml-[200px] font-bold text-[36px] mt-[20px]">
-        FIND CLOTHES THAT MATCHES YOUR STYLE
-      </h1>                     
-      <p className="lg:w-[490px] w-[300px]  font-normal text-gray-500 text-[14px] mt-[200px]  lg:ml-[200px]">
-        Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
-      </p>                     
-      <button className="w-[200px] h-[52px] lg:ml-[190px] text-white bg-black mt-[20px] rounded-full">
-        Shop Now
-      </button>                                          
-      </div>   
-         <div>
-          <Image src={rectangle2} alt="rectangle2" className="lg:w-[400px] h-[400px] w-[400px]  md:w-[300px] lg:h-[500px] md:mt-6 lg:mt-14 lg:ml-[200px]" />
-        </div>          
+    <div className="w-full">
+      {/* Hero Section */}
+      <div className="w-full lg:h-[600px] bg-gray-100 mt-6 lg:flex">
+        <div>
+          <h1 className="w-[90%] lg:w-[315px] h-[40px] pt-[80px] lg:ml-[200px] font-bold text-[36px] mt-[20px]  lg:text-left">
+            FIND CLOTHES THAT MATCHES YOUR STYLE
+          </h1>
+          <p className="lg:w-[490px] w-[90%] font-normal text-gray-500 text-[14px] mt-[150px] lg:mt-[200px] lg:ml-[200px]  lg:text-left">
+            Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
+          </p>
+          <button className="w-[200px] h-[52px] lg:ml-[190px] text-white bg-black mt-[20px] rounded-full mx-auto lg:mx-0 block">
+            Shop Now
+          </button>
+        </div>
+        <div className="flex justify-center mt-4 lg:mt-0">
+          <Image
+            src={rectangle2}
+            alt="rectangle2"
+            className="w-[90%] lg:w-[400px] lg:h-[500px] object-cover"
+          />
+        </div>
       </div>
-            
-      <div className="w-full lg:h-[122px]  grid grid-cols-1  md:grid-cols-1    bg-black text-white   lg:pt-[10px] lg:flex ">
-    <Image src={versace} alt="logo" className="pt-[20px] w-[70px] h-auto  lg:ml-[20px] lg:w-[200px] lg:h-[100px]" />
-    <Image src={zara} alt="logo" className=" pt-[20px] w-[70px] h-auto lg:ml-[100px] lg:w-[200px] lg:h-[100px]" />
-    <Image src={gucci} alt="logo" className="pt-[20px] w-[90px] h-auto lg:ml-[100px] lg:w-[200px] lg:h-[100px]" />
-    <Image src={prada} alt="logo" className="pt-[20px] w-[110px] h-auto lg:ml-[100px] lg:w-[200px] lg:h-[100px]" />
-    <Image src={calvinklein} alt="logo" className="pt-[20px] w-[120px] h-auto lg:ml-[100px] lg:w-[200px] lg:h-[100px]" />
-  </div>
-  
-  
-               
-              <div className="w-[403px] h-[58px] mt-4 lg:mt-[200px] lg:ml-[300px]">
-                <p className="font-bold text-[30px] mx-10 md:mx-80 md:whitespace-nowrap lg:text-[48px]">NEW ARRIVALS</p>
-              </div>
-                <div>
-                <Section1/>
-                </div>
-                 <div>
-                   <button className="w-[218px] h-[52px] mt-[100px] ml-10  lg:ml-[611px] border-[1px] rounded-[62px] pt-[16px] pr-[54px] pb-[16px] pl-[54px] font-medium text-[16px] text-black hover:bg-gray-100">View All</button>
-               </div>
-  
-               <hr className="mt-4 lg:ml-[300px] w-[250px] lg:w-[1000px]"/>
-  
-  
-               <div>
-                    <h1 className="lg:ml-[600px] mx-10 md:mx-40 mt-[50px] font-bold text-[30px] lg:text-[48px]">TOP SELLING</h1>
-               </div>
-                 
-                 <div>
-                  <Section2/>
-                 </div>
 
-                 
-             
-               
-  
-                          <div>
-                            <button className="w-[218px] h-[52px] border-[1px] mt-[100px] ml-10 lg:ml-[611px] rounded-[62px] pt-[16px] pb-[16px] pr-[54px] pl-[54px] font-medium text-[16px] hover:bg-gray-100">View All</button>
-                          </div>
-                          
-                          <hr className="mt-4 lg:ml-[300px] w-[200px] lg:w-[1000px]"/>
+      {/* Brand Logos Section */}
+      <div className="w-full lg:h-[122px] grid grid-cols-2 md:grid-cols-3 lg:flex items-center bg-black text-white lg:pt-[10px]">
+        <Image
+          src={versace}
+          alt="logo"
+          className="w-[70px] h-auto mx-auto lg:mx-[20px] lg:w-[200px]"
+        />
+        <Image
+          src={zara}
+          alt="logo"
+          className="w-[70px] h-auto mx-auto lg:mx-[100px] lg:w-[200px]"
+        />
+        <Image
+          src={gucci}
+          alt="logo"
+          className="w-[90px] h-auto mx-auto lg:mx-[100px] lg:w-[200px]"
+        />
+        <Image
+          src={prada}
+          alt="logo"
+          className="w-[110px] h-auto mx-auto lg:mx-[100px] lg:w-[200px]"
+        />
+        <Image
+          src={calvinklein}
+          alt="logo"
+          className="w-[120px] h-auto mx-auto lg:mx-[100px] lg:w-[200px]"
+        />
+      </div>
 
+      {/* New Arrivals Section */}
+      <div className="text-center mt-8 lg:mt-[200px]">
+        <p className="font-bold text-[30px] lg:text-[48px]">NEW ARRIVALS</p>
+      </div>
+      <div>
+        <Section1 />
+      </div>
+      <div className="text-center mt-[50px]">
+        <button className="w-[218px] h-[52px] border-[1px] rounded-[62px] font-medium text-[16px] text-black hover:bg-gray-100">
+          View All
+        </button>
+      </div>
+      <hr className="mt-4 w-[90%] lg:w-[1000px] mx-auto" />
 
-                      
-  
-                       <div className="lg:w-[1239px] w-[300px]  lg:h-[820px] rounded-[40px] bg-gray-100 mt-[100px] lg:ml-[200px] ">
-                             <div>
-                              <h1 className="lg:ml-[276px] pt-[70px] font-bold text-[30px] lg:text-[48px]">BROWSE BY Dress STYLE</h1>
-                              </div>
-  
-                              <div className="lg:flex lg:mt-7">
-                                <Image src={frame1} alt="frame1" className="lg:w-[407px] lg:h-[289px] w-[300px]  lg:ml-[64px] rounded-[20px]" />
-  
-                                <Image src={frame2} alt="frame2" className="lg:w-[684px]  lg:h-[289px] w-[300px]   rounded-[20px]  lg:ml-[50px]" />
-  
-                              </div>
-  
-                              <div className="lg:flex mt-7">
-                                <Image src={frame3} alt="frame1" className="lg:w-[684px]   lg:h-[289px] w-[300px]   lg:ml-[64px] rounded-[20px]" />
-  
-                                <Image src={frame4} alt="frame2" className="lg:w-[401px] lg:h-[289px] w-[300px]    rounded-[20px]  lg:ml-[50px]" />
-  
-                              </div>
-                            </div>
-  
-                            <div className="flex">
+      {/* Top Selling Section */}
+      <div className="text-center mt-8">
+        <h1 className="font-bold text-[30px] lg:text-[48px]">TOP SELLING</h1>
+      </div>
+      <div>
+        <Section2 />
+      </div>
+      <div className="text-center mt-[50px]">
+        <button className="w-[218px] h-[52px] border-[1px] rounded-[62px] font-medium text-[16px] hover:bg-gray-100">
+          View All
+        </button>
+      </div>
+      <hr className="mt-4 w-[90%] lg:w-[1000px] mx-auto" />
+
+      {/* Browse by Dress Style Section */}
+      <div className="w-full lg:w-[1239px] bg-gray-100 rounded-[40px] mx-auto mt-[100px]">
+        <h1 className="text-center pt-[70px] font-bold text-[30px] lg:text-[48px]">
+          BROWSE BY DRESS STYLE
+        </h1>
+        <div className="lg:flex lg:mt-7">
+          <Image
+            src={frame1}
+            alt="frame1"
+            className="w-[90%] lg:w-[407px] mx-auto lg:ml-[64px] rounded-[20px]"
+          />
+          <Image
+            src={frame2}
+            alt="frame2"
+            className="w-[90%] lg:w-[684px] mx-auto mt-4 lg:mt-0 lg:ml-[50px] rounded-[20px]"
+          />
+        </div>
+        <div className="lg:flex mt-7">
+          <Image
+            src={frame3}
+            alt="frame3"
+            className="w-[90%] lg:w-[684px] mx-auto lg:ml-[64px] rounded-[20px]"
+          />
+          <Image
+            src={frame4}
+            alt="frame4"
+            className="w-[90%] lg:w-[401px] mx-auto mt-4 lg:mt-0 lg:ml-[50px] rounded-[20px]"
+          />
+        </div>
+      </div>
+
+      {/* Customer Reviews Section */}
+        <div className="flex">
                               <h1 className="font-bold lg:text-[48px] mt-[200px] lg:ml-[200px]">OUR HAPPY CUSTOMER</h1>
                               <div className="flex mt-7 ">
                               <FaArrowLeft className="w-[24px] h-[24px] mt-[200px] lg:ml-[450px]" />
@@ -147,20 +178,7 @@ export default function Home() {
                             </div>
                             </div>
                            
-
-                           
-                            
-                                       
-                                             
-                                             
-                                      
-                                    
-                            
+            </div>
   
-                            
-  
-  
-  
-  </div>
-    );
-  }                                                  
+  );
+}
